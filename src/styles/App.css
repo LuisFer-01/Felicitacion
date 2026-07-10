@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #FF1493 0%, #FFD700 25%, #00CED1 50%, #FF6347 75%, #9370DB 100%);
+  background-attachment: fixed;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+}
+
+.hero-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #FF1493;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  color: #9370DB;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.balloons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+
+.balloon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.balloon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.balloon:nth-child(5) {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Message Section */
+.message-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.message-card h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #FF6347;
+  margin-bottom: 1.5rem;
+}
+
+.message-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+/* Wishes Section */
+.wishes-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.wishes-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wish-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.wish-card:hover {
+  transform: translateY(-10px);
+}
+
+.wish-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.wish-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.signature {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #FF1493;
+  margin: 1rem 0;
+}
+
+.date {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  
+  .message-card h3,
+  .wishes-title {
+    font-size: 2rem;
+  }
+  
+  .wishes-grid {
+    grid-template-columns: 1fr;
+  }
+}
