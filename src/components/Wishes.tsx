@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 
-const wishes = [
+interface Wish {
+  emoji: string;
+  text: string;
+}
+
+const wishes: Wish[] = [
   { emoji: '🌟', text: 'Que todos tus sueños se hagan realidad' },
   { emoji: '🎊', text: 'Un año lleno de aventuras increíbles' },
   { emoji: '💫', text: 'Salud, amor y mucha felicidad' },
@@ -8,7 +13,7 @@ const wishes = [
   { emoji: '🌈', text: 'Días llenos de color y alegría' },
 ];
 
-const Wishes = () => {
+const Wishes: React.FC = () => {
   return (
     <section className="wishes-section">
       <h3 className="wishes-title">Mis deseos para ti</h3>

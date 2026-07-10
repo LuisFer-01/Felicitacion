@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Confetti from './Confetti';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className="hero">
       <Confetti />

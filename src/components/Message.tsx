@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Message = () => {
+const Message: React.FC = () => {
   return (
     <motion.section
       className="message-section"
